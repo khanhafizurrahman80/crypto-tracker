@@ -8,7 +8,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="w-[85vw] my-4">
+    <div className="mx-4 my-4">
       <div className="flex justify-between">
         <div className="text-3xl">
           <p> Welcome, DevOps team!</p>

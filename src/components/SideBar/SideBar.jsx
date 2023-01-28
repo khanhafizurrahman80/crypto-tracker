@@ -36,7 +36,7 @@ const routes = [
   },
 ];
 
-const SideBar = ({ children }) => {
+const SideBar = () => {
   return (
     <>
       <div className="flex shadow-md rounded-lg bg-white">
@@ -55,7 +55,6 @@ const SideBar = ({ children }) => {
           })}
         </nav>
       </div>
-      <main className="mt-14 ml-4">{children}</main>
     </>
   );
 };

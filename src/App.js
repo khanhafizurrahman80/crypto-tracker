@@ -13,25 +13,28 @@ import Setting from "./pages/Setting";
 
 function App() {
   return (
-    <div className="flex">
+    <>
       <Router>
-        <SideBar>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/messages" element={<Messages />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/file-manager" element={<FileManager />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/saved" element={<Saved />} />
-            <Route path="/settings" element={<Setting />} />
+        <div className="flex">
+          <SideBar />
+          <div className="flex-1 w-[85vw]">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/messages" element={<Messages />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/file-manager" element={<FileManager />} />
+              <Route path="/order" element={<Order />} />
+              <Route path="/saved" element={<Saved />} />
+              <Route path="/settings" element={<Setting />} />
 
-            <Route path="*" element={<> not found</>} />
-          </Routes>
-        </SideBar>
-        <Navbar />
+              <Route path="*" element={<> not found</>} />
+            </Routes>
+          </div>
+        </div>
       </Router>
-    </div>
+    </>
   );
 }
 
