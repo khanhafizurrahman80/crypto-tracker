@@ -1,42 +1,37 @@
 import React from "react";
-import images from "../../constants/images";
+
+import { BiSearch } from "react-icons/bi";
+import { MdNotificationImportant } from "react-icons/md";
+import { FaSmileBeam } from "react-icons/fa";
+
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="bg-grey-200 flex items-center justify-between p-2">
-      <div className="flex items-center"></div>
-      <img src={images.gericht} alt="app__logo" className="h-10" />
-      <ul className="flex justify-center items-center flex-1 list-none">
-        <li className="mr-1 cursor-pointer hover:text-gray-600 px-2">
-          <a href="#home" className="text-blue-500 hover:text-blue-700">
-            Home
-          </a>
-        </li>
-        <li className="mr-1 cursor-pointer hover:text-gray-600 px-2">
-          <a href="#about" className="text-blue-500 hover:text-blue-700">
-            About
-          </a>
-        </li>
-        <li className="mr-1 cursor-pointer hover:text-gray-600 px-2">
-          <a href="#menu" className="text-blue-500 hover:text-blue-700">
-            Menu
-          </a>
-        </li>
-        <li className="mr-1 cursor-pointer hover:text-gray-600 px-2">
-          <a href="#awards" className="text-blue-500 hover:text-blue-700">
-            Awards
-          </a>
-        </li>
-        <li className="mr-1 cursor-pointer hover:text-gray-600 px-2">
-          <a href="#contact" className="text-blue-500 hover:text-blue-700">
-            Contact
-          </a>
-        </li>
-      </ul>
-      <a className="flex flex-end center p-2 text-black " href="#login">
-        Log In / Registration
-      </a>
+    <div className="w-[85vw] my-4">
+      <div className="flex justify-between">
+        <div className="text-3xl">
+          <p> Welcome, DevOps team!</p>
+        </div>
+        <div className="flex justify-between">
+          <div className="py-2.5">
+            <BiSearch className="h-8 w-8 text-black" />
+          </div>
+          <input
+            className="bg-gray-300 rounded-md w-full"
+            placeholder="Search..."
+          />
+          <div className="py-2.5 mx-3">
+            <MdNotificationImportant
+              className="h-8 w-8 text-black rounded-full"
+              viewBox="0 0 24 24"
+            />
+          </div>
+          <div className="py-2.5">
+            <FaSmileBeam className="h-8 w-8 rounded-full text-center text-xl" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
