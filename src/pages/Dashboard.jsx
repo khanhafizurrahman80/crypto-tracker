@@ -77,8 +77,6 @@ const Dashboard = () => {
     });
   }, []);
 
-  console.log(barData);
-
   return (
     <>
       <div className="mx-4 flex justify-between rounded-lg shadow-md">
@@ -97,7 +95,9 @@ const Dashboard = () => {
               {data.chartData ? <StockChart info={data} /> : null}
             </div>
             <div className="w-96 h-96 mt-8 rounded-lg bg-yellow-100 shadow-md mx-4 hover:shadow-lg">
-              {/* {barData ? <BarChart info={barData} /> : null} */}
+              {Object.keys(barData).length !== 0 ? (
+                <BarChart info={barData} />
+              ) : null}
             </div>
           </div>
         </div>
