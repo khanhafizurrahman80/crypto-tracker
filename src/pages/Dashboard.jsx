@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import BarChart from "../components/Chart/BarChart";
 import StockChart from "../components/Chart/stockChart";
 
 const Dashboard = () => {
@@ -10,6 +11,7 @@ const Dashboard = () => {
   const [withdraw, setWithdraw] = useState("");
   const [cashback, setCashback] = useState("");
   const [data, setData] = useState({});
+  const [barData, setBarData] = useState({});
 
   useEffect(() => {
     setTotalData("$14 564");
@@ -53,7 +55,29 @@ const Dashboard = () => {
         ],
       },
     });
+    setBarData({
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: "Dataset 1",
+          data: [-450, 989, -311, -874, 567, 600, -403],
+          backgroundColor: "rgb(255, 99, 132)",
+        },
+        {
+          label: "Dataset 2",
+          data: [450, -989, 311, 874, -567, -600, 403],
+          backgroundColor: "rgb(255, 99, 132)",
+        },
+        {
+          label: "Dataset 3",
+          data: [220, -768, 654, -954, 567, -245, 985],
+          backgroundColor: "rgb(255, 99, 132)",
+        },
+      ],
+    });
   }, []);
+
+  console.log(barData);
 
   return (
     <>
@@ -72,7 +96,9 @@ const Dashboard = () => {
             <div className="w-[500px] h-50 mt-8 rounded-lg bg-red-300 shadow-md mx-4 hover:shadow-lg">
               {data.chartData ? <StockChart info={data} /> : null}
             </div>
-            <div className="w-96 h-96 mt-8 rounded-lg bg-yellow-100 shadow-md mx-4 hover:shadow-lg"></div>
+            <div className="w-96 h-96 mt-8 rounded-lg bg-yellow-100 shadow-md mx-4 hover:shadow-lg">
+              {barData ? <BarChart info={barData} /> : null}
+            </div>
           </div>
         </div>
         <div className="w-[500px] h-[100vh] mt-8 rounded-lg bg-yellow-700 shadow-md mx-4 hover:shadow-lg">
