@@ -18,8 +18,8 @@ const buildData = ({ chartData }) => ({
     {
       label: "",
       data: chartData.data,
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      borderColor: "rgba(255, 255, 255, 1)",
+      backgroundColor: "rgba(147, 198, 231, 0.1)",
+      borderColor: "rgba(174, 226, 255, 1)",
       pointBackgroundColor: "rgba(255, 255, 255, 1)",
       fill: "start",
       tension: 0.4,
@@ -68,7 +68,7 @@ const StockChart = ({ info }) => {
 
   return (
     <>
-      <div className="flex w-full h-full px-5 pb-4 pt-8 bg-indigo-500 text-white items-center">
+      <div className="flex w-full h-full px-5 pb-4 pt-8 bg-#B9F3FC-500 text-white items-center">
         <Line type="line" data={data} options={options} />
       </div>
     </>
