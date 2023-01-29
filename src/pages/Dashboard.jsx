@@ -97,7 +97,7 @@ const Dashboard = () => {
               {data.chartData ? <StockChart info={data} /> : null}
             </div>
             <div className="w-96 h-96 mt-8 rounded-lg bg-yellow-100 shadow-md mx-4 hover:shadow-lg">
-              {barData ? <BarChart info={barData} /> : null}
+              {/* {barData ? <BarChart info={barData} /> : null} */}
             </div>
           </div>
         </div>
